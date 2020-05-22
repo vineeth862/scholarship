@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <div class="row container mt-5 ml-5">
+    <div class="col-md-10">
+    <h2 class="text-danger ml-5">Categories list</h2>
+      <hr color="green">
+      <div class="row">
+      <div class="col-md-3 mb-2 mt-5 ">
+        <div class="card h-100" >
+          <img class="card-img-top" src="https://i.ytimg.com/vi/2QvOxa_7wEw/maxresdefault.jpg" alt="">
+          <div class="card-body"style="width:200px">
+            <h4 class="card-title">Minorities category scholarships</h4>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'minorities' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-2 mt-5">
+        <div class="card h-100" >
+          <img class="caed-img-top" src="https://i.ytimg.com/vi/2QvOxa_7wEw/maxresdefault.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Backward classes category scholarships</h4>
+            <p></p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'backward' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-2 mt-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://i.ytimg.com/vi/2QvOxa_7wEw/maxresdefault.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">SC/ST category scholarships</h4>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'sc' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+    <!-- /.row -->
+
+
+{% endblock %}

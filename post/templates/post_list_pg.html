@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+        {% if post.level == 'pg' or post.level == 'all'   %}
+            {% include 'base_list.html' %}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+        {% if post.level == 'puc' or post.level == 'all' or post.level == 'school and puc' %}
+            {% include 'base_list.html' %}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

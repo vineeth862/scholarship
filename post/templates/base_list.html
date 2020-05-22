@@ -1,0 +1,19 @@
+
+<article class="media content-section py-1  mt-3 ">
+            <img class="rounded-circle article-img" src="{{ post.logo.url }}">
+              <div class="media-body mt-1 mb-n4  ">
+                <div class="article-metadata">
+                    {% if post.category == 'all' %}
+                        <h7 class="mr-2 text-info" >For all categories</h7>
+                    {% else %}
+                     <h7 class="mr-2 text-info " >For category-{{ post.category }}</h7>
+                    {% endif %}
+                  <small class="text-muted">{{ post.posted_on|date:"F d,Y" }}</small>
+                    <h3 class="btn btn-outline-danger mb-2 ml-3">Last Date: {{ post.last_date|date:"F d,Y" }}</h3>
+
+                </div>
+                <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+                <a class="btn btn-outline-info mb-4" href="{% url 'detail' post.id %}">Apply Now</a>
+              </div>
+            </article>

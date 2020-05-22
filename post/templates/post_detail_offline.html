@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ object.logo.url }}">
+    <div class="media-body">
+        <div class="article-metadata">
+             {% if post.category == 'all' %}
+                        <small class="mr-2 text-info" >For all categories</small>
+                    {% else %}
+                     <small class="mr-2 text-info" >For categories-{{ object.category }}</small>
+                    {% endif %}
+            <small class="text-muted">{{ object.posted_on|date:"F d,Y" }}</small>
+            <h3 class="btn btn-outline-danger mb-1 ml-3">Last Date: {{ object.last_date|date:"F d,Y" }}</h3>
+        </div>
+          <header class="bg-dark py-2 mb-3">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-10 ">
+
+          <h1 class="display-4 text-white mt-5 mb-2">{{ object.title }}</h1>
+          <p class="lead mb-5 text-white-50">{{ object.content }}</p>
+
+        </div>
+      </div>
+    </div>
+  </header>
+        <hr><h3 class="text-secondary">Offered By:</h3><p class="article-content">{{ object.offered_by }}</p>
+        <hr><h3 class="text-success">Requirements:</h3><p class="article-content">{{ object.Reqirements }}</p>
+        <hr><h3 class="text-info">Benifits of this scholarship:</h3><p class="article-content">{{ object.benifits }}</p>
+        <hr><h3 class="text-info">How to apply:</h3><p class="article-content">{{ object.how_to_post }}</p>
+            <hr><a class="btn btn-outline-success mb-4" href="{{ object.url }}" >Visit their website</a>
+
+
+    </div>
+</article>
+{% endblock %}
+

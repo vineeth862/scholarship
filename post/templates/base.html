@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ScholarsGo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'post/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'post/css/business-frontpage.css' %}" rel="stylesheet">
+
+  <link href="{% static '/open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+    <style>
+
+  body{
+  background-image: url('{% static "images/wall2.jpg" %}');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+    background-size: 100% 100%;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top mb=1" >
+    <div class="container">
+      <a class="navbar-brand " href="#"> <img class="rounded-circle article-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAB/CAMAAACjbBIvAAAASFBMVEX///9SoqZLn6NFnaH7/f0+mp70+fnM4uOFu77g7e6RwcSbx8mnzc/H3+Dq9PR7trlfqKzX6OlysrW41thorLCw0tS/29wxlpqZtTxnAAAFLUlEQVR4nO2b2bajIBBFIwWIIzje///TC6gR4xCikPjAXv3SrrQ5fSiKqtI8HoFAIBAIBAKBQCAQCHxAWTQx/rWI99CCCQSozpJfKzmk7FNEUKQA0ubVTZ3Vbg4yNQgi6eztxBpumgDcy1kaL900kdfb/B7O0iKNNtxcOEvqvPq5TBbtuXkjZ6Wb4o2by5jl+S9Sl62bS2eRdJZ+VWacCvhQ5uQsqrtvOVvGLDopc3QWxBecxTI2Ac7L/JKztm7aZQN/zlrGJiJQM7u9BhHPS8cqpZtbh+VaJoi0UP+A2wUyAiI6h3k2zlqrBZUZsx89qqyEaqSznQtnZUKyclNvkvkLy9ZeqnK27a4VMjhOW2Sz0+WH0sX2SD4QOt7ggrPV29JjBBDrl47Q+vOEK52tu1PJILFyU6Yb8VJ74EquxMdCB7HsjNLMRqi0s1jIpHFmuRLbnDkPGvLeApGXpk6c5HZxvXtHcWr5GTrM9IB4sbhv2XBy6aCVybU4I1R+dcf3TkYZnctujlbsbHn1vGMaXzhdk4bDWgAQ3ixumnTXZEo3L8nU4JWzKnean6DxrvVWaDcdnahJx58BCGg5Hinz9oqdQKK0cFqmFIMaFGXmIsn+GV2w06WbE3jI5SDMbph29QU7ZTnh2E3NcAxAOhtAK36cxQ4BaJ27qSmH2/NZZ1efX3VZbDMPbmqYshTxyQTcwd9ZnQDuY3NmsJTMe55WnSAn1t6nm5pOWQrZi/z8w0DVrYvfiQ9mWtCqzMHqaLIUK/9TPPbppkYvPtouHRMbZ5Wb/TfmZ7Gq/6AZlK12A1Wl3kEiUI3HOjZpw18vOSBXYfo3fFn2F2XrWiKRSWvTWSRLj3798Z4DQR6U6jAdbywbeUBtWr1+u3S2fnVWurmx08tmnBJ6UKo6YjQsFp6sirJiZVWlnJ3d3Co9ZLX9bMrdCy1F9MxReFay42yrDJN/WE9fIhqXPTefB7hXqnt36AbVZvshgzBbHzdVXovtRX8JZfdKY6106HDKlzZQdSkrZ/GGm/V6Suheaac31FDu4XTV0wFpN5w1UG5uNdaudeJUfwlqx/Vs1u0nUs5ut0EqNvdmrq6VTgMKqOnywouzUGerIVjZH42GHQutnoEJ6XCF7ozxVDY1Yla5eXzOOlZqxOV0qHT74wdZymc6oGn/vv13rNQYLk/1aXmkAKlH0Ly1KbHcCsX1Wil9N8mzbFfdKn2k85fCuGHGcvUyjpUW846ayrSbKn1M0xMkpgMSWz4Y+bbSsh2lPmcSVDgRKlwrlalen6Zzc1JdfxoZ7XY7lxhHUs+/uwlTODnUPSLXysh0+vROhCLmoQMcEhUZN1QZuVCKIg8d9TjmI9OOyh2EKRI+3qAZy3zopwv9ZVefJaRbxtw/tieKhL99AHSok+R+nuuPWx3y+RLuxekQQIh5eltiyvNoMUCjzScvIM0AYbEfnc9sGqF0eR3HfPcVuT2ZqPX5sifbUfoYHlbZTlERkK0xkUOeDf726UfjTFp7WDcj1aO0zPtbUtmx0oeaolZ9WkdEIhWbAKhrgudF4n1yarz78O74o0nc5FnKGB9gaZZ3RVV+67XDueGzrX3wiF9dK+YeemtH3QjzdRIz898PZpxExEM96YzCPN7//G/f0xRmkkQe2h5XLF/OMkqpu5GIxbkjbrv4L0JvvPPzRbGMxC1+O7BNbvQgKPr1DwcOKdlUISHwVv06ImGRflzupZF0TJVFsgC+7bZfgMuv/qYhEAgEAoFAIBAIBAKBm/IPSmc1OZoDviYAAAAASUVORK5CYII=" style="width:100px;" alt="ScholarsGo"><h7 class="ml-n2">ScholarsGo </h7></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto ml-3">
+          <li class="nav-item active ">
+            <h5><a class="nav-link" href="{% url 'home' %}">Home
+              <span class="sr-only">(current)</span>
+            </a></h5>
+          </li>
+
+          <li class="nav-item ">
+            <h5><a class="nav-link ml-3" href="{% url 'total' %}">Scholarships</a></h5>
+          </li>
+          <li class="nav-item">
+            <h5> <a class="nav-link ml-3" href="{% url 'offline' %}">Offline-scholarships</a></h5>
+          </li>
+          <li class="nav-item">
+            <h5> <a class="nav-link ml-3 " href="{% url 'category' %}">Category-Based</a></h5>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+         <!-- Navbar Right Side -->
+        <div class="navbar-nav">
+            <!-- if u logged in then only user will get profile and logout on navbar -->
+          {% if user.is_authenticated %}
+          <h3><a class="nav-item nav-link" href="{% url 'logout' %}"><span class="fi-account-logout"></span>Logout</a></h3>
+            {% else %}
+          <h3><a class="nav-item nav-link" href="{% url 'login' %}">Login</a></h3>
+          <h3><a class="nav-item nav-link" href="{% url 'register' %}">Register</a></h3>
+          {% endif %}
+
+    </div>
+  </nav>
+
+        <!-- To display messages from user views -->
+      <main role="main" class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+        <!-- To display messages from user views -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+      {% block content %}{% endblock %}
+    </div>

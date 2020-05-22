@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+        {% if post.category == 'backward classes' %}
+           {% include 'base_list.html' %}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
